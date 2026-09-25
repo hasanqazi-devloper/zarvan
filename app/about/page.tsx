@@ -18,146 +18,139 @@ import {
 } from 'lucide-react';
 
 export default function AboutPage() {
+  const whatsappNumber = '989100424714';
+  const whatsappMsg = encodeURIComponent(
+    'Hello Zohreh, I would like to inquire about B2B export prices for Saffron, Barberry, Edible Oils, and Tomato Paste.'
+  );
+
   const steps = [
-    { num: '01', title: 'Orchard Harvest & Selection', desc: 'Hand-harvested premium pistachios directly sourced from prime orchards in Rafsanjan & Kerman.' },
-    { num: '02', title: 'Laser Sorting & Mechanical Sizing', desc: 'Precision optical color sorting and ounce calibration (20/22, 28/30) at our central facility.' },
-    { num: '03', title: 'Moisture Calibration & Roasting', desc: 'Strict moisture index control preserving natural crunchiness, rich oil content, and freshness.' },
-    { num: '04', title: 'Aflatoxin & Phytosanitary COA', desc: 'Comprehensive lab testing, zero-aflatoxin verification, and official phytosanitary inspection.' },
-    { num: '05', title: 'Direct Sea & Land Logistics', desc: 'Vacuum-sealed packaging and container dispatch directly via Southern Iranian export ports.' },
+    { num: '01', title: 'Direct Agro Sourcing', desc: 'Sourced directly from verified Iranian farms & processing facilities without middleman markups.' },
+    { num: '02', title: 'Optical Sorting & Grading', desc: 'Precision color sorting and grade calibration for Saffron, Barberry, and Pistachios.' },
+    { num: '03', title: 'Controlled Packaging', desc: 'Aroma-sealed tin, glass, and vacuum packaging to ensure maximum shelf-life and freshness.' },
+    { num: '04', title: 'Laboratory COA Verification', desc: 'Comprehensive testing for Crocin levels, Brix standards, and official Phytosanitary certification.' },
+    { num: '05', title: 'Global Container Logistics', desc: 'Efficient dispatch via Southern Iranian export ports under FOB, CIF, or CFR terms.' },
   ];
 
   return (
     <div className="bg-[#0B2B22] text-[#F4F0E6] min-h-screen selection:bg-[#C5922E] selection:text-[#0B2B22]">
 
-      {/* 1. HERO SECTION (Pistachio Garden Background) */}
-    {/* 1. HERO SECTION (100% Clear Background Image) */}
-<section className="relative bg-[#0B2B22] text-[#F4F0E6] overflow-hidden py-20 md:py-18 border-b border-[#1A4337]">
-  
-  {/* BACKGROUND IMAGE CONTAINER */}
-  <div className="absolute inset-0 z-0">
-    <Image
-      src="https://images.unsplash.com/photo-1756749442845-4973b7cede48?auto=format&fit=crop&w=1920&q=100"
-      alt="Iranian Pistachio Orchard"
-      fill
-      priority
-      unoptimized // Direct source file render karega bina Next.js compression ke
-      className="object-cover object-center opacity-40 -scale-x-100"
-    />
-    
-    {/* Soft subtle left gradient to keep text readable without darkening the image */}
-    <div className="absolute inset-0 bg-gradient-to-r from-[#0B2B22]/85 via-[#0B2B22]/50 to-transparent" />
-  </div>
+      {/* 1. HERO SECTION */}
+      <section className="relative bg-[#0B2B22] text-[#F4F0E6] overflow-hidden py-20 md:py-18 border-b border-[#1A4337]">
+        {/* BACKGROUND IMAGE CONTAINER */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="https://images.unsplash.com/photo-1756749442845-4973b7cede48?auto=format&fit=crop&w=1920&q=100"
+            alt="Iranian Agriculture & Export Hub"
+            fill
+            priority
+            unoptimized
+            className="object-cover object-center opacity-40 -scale-x-100"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0B2B22]/85 via-[#0B2B22]/50 to-transparent" />
+        </div>
 
-  {/* CONTENT CONTAINER */}
-  <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
-    <div className="max-w-3xl space-y-7 text-left">
+        {/* CONTENT CONTAINER */}
+        <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+          <div className="max-w-3xl space-y-7 text-left">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight leading-none uppercase">
+              <span className="text-[#F4F0E6]">ABOUT </span>
+              <span className="text-[#C5922E] drop-shadow-[0_0_25px_rgba(197,146,46,0.3)]">ZOHREH JANATABADI.</span>
+            </h1>
 
-      <h1 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight leading-none uppercase">
-        <span className="text-[#F4F0E6]">ABOUT </span>
-        <span className="text-[#C5922E] drop-shadow-[0_0_25px_rgba(197,146,46,0.3)]">PISTACHIO HOME.</span>
-      </h1>
+            <p className="text-[#F4F0E6]/90 text-sm sm:text-base md:text-lg font-medium leading-relaxed max-w-2xl">
+              Connecting global wholesale buyers directly to Iran's premium agricultural commodities, including Super Negin Saffron, Zarvan Barberry, Nazila Oils, Feijoa Tomato Paste, and Iranian Pistachios.
+            </p>
 
-      <p className="text-[#F4F0E6]/90 text-sm sm:text-base md:text-lg font-medium leading-relaxed max-w-2xl">
-        Connecting global wholesale buyers directly to Iran’s most celebrated pistachio orchards through rigorous laboratory grading, batch traceability, and zero-middleman container logistics.
-      </p>
-
-      <div className="pt-2">
-        <a
-          href="#story"
-          className="inline-flex items-center gap-3 bg-[#C5922E] hover:bg-[#B38226] text-[#0B2B22] font-black text-xs uppercase tracking-wider px-8 py-4 rounded-xl transition-all duration-300 shadow-xl shadow-[#C5922E]/20 hover:shadow-[#C5922E]/40 transform active:scale-95 group"
-        >
-          <span>EXPLORE OUR HERITAGE</span>
-          <ArrowDown className="w-4 h-4 stroke-[3] transition-transform duration-300 group-hover:translate-y-1" />
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
+            <div className="pt-2">
+              <a
+                href="#story"
+                className="inline-flex items-center gap-3 bg-[#C5922E] hover:bg-[#B38226] text-[#0B2B22] font-black text-xs uppercase tracking-wider px-8 py-4 rounded-xl transition-all duration-300 shadow-xl shadow-[#C5922E]/20 hover:shadow-[#C5922E]/40 transform active:scale-95 group"
+              >
+                <span>EXPLORE OUR HERITAGE</span>
+                <ArrowDown className="w-4 h-4 stroke-[3] transition-transform duration-300 group-hover:translate-y-1" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* 2. OUR STORY & ORIGIN */}
-    <section id="story" className="py-16 md:py-18 bg-[#133A2E] border-b border-[#1A4337] relative">
-  <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-    
-    {/* LEFT: JUST CLEAR PNG IMAGE */}
-    <div className="lg:col-span-6 relative h-80 sm:h-[450px] w-full flex items-center justify-center">
-      <Image
-        src="/about.png"
-        alt="Rafsanjan Processing Facility"
-        fill
-        priority
-        className="object-contain object-center drop-shadow-none"
-      />
-    </div>
+      <section id="story" className="py-16 md:py-18 bg-[#133A2E] border-b border-[#1A4337] relative">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <div className="lg:col-span-6 relative h-80 sm:h-[450px] w-full flex items-center justify-center">
+            <Image
+              src="/about.png"
+              alt="Iranian Trade Facility"
+              fill
+              priority
+              className="object-contain object-center drop-shadow-none"
+            />
+          </div>
 
-    {/* RIGHT: CONTENT */}
-    <div className="lg:col-span-6 space-y-6">
-      <h2 className="text-3xl sm:text-4xl font-black text-[#F4F0E6] tracking-tight leading-tight">
-        Eliminating Supply Chain Risks for Overseas Importers
-      </h2>
-      
-      <p className="text-[#F4F0E6]/80 text-sm md:text-base leading-relaxed font-normal">
-        Pistachio Home was established to address quality inconsistency and price speculation in global nut exports. By operating dedicated sizing lines and humidity-controlled storage in Rafsanjan, we deliver 100% lab-verified Iranian pistachios directly to bulk buyers worldwide without broker inflated margins.
-      </p>
+          <div className="lg:col-span-6 space-y-6">
+            <h2 className="text-3xl sm:text-4xl font-black text-[#F4F0E6] tracking-tight leading-tight">
+              Eliminating Supply Chain Risks for Overseas Importers
+            </h2>
+            
+            <p className="text-[#F4F0E6]/80 text-sm md:text-base leading-relaxed font-normal">
+              Managed by Zohreh Janatabadi, our trade desk eliminates intermediary speculation and quality inconsistencies. We supply certified agricultural commodities directly from Iranian production hubs to international markets with full batch traceability.
+            </p>
 
-      <div className="p-4 bg-[#0B2B22] border-l-4 border-[#C5922E] rounded-r-xl space-y-1 border border-[#1A4337]">
-        <p className="text-xs font-bold text-[#C5922E] uppercase tracking-wider">Export Varieties</p>
-        <p className="text-xs text-[#F4F0E6]/80">
-          Akbari (Super Long), Ahmad Aghaei (Long), Kaleh Ghouchi (Jumbo), Fandoghi (Round), and Premium Green Kernel Fractions.
-        </p>
-      </div>
-    </div>
+            <div className="p-4 bg-[#0B2B22] border-l-4 border-[#C5922E] rounded-r-xl space-y-1 border border-[#1A4337]">
+              <p className="text-xs font-bold text-[#C5922E] uppercase tracking-wider">Export Commodity Lineup</p>
+              <p className="text-xs text-[#F4F0E6]/80">
+                Super Negin Saffron, Zarvan Barberry (Pofaki), Nazila Soybean Oil (16kg Tins), Feijoa Tomato Paste (Brix 27-29%), and Premium Pistachio Nuts.
+              </p>
+            </div>
+          </div>
 
-  </div>
-</section>
-
-    {/* 3. TAILORED EXPORT SOLUTIONS */}
-<section className="py-16 md:py-18 bg-[#0B2B22] border-b border-[#1A4337]">
-  <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-    
-    {/* LEFT: CONTENT */}
-    <div className="lg:col-span-6 space-y-6">
- 
-      
-      <h2 className="text-3xl sm:text-4xl font-black text-[#F4F0E6] tracking-tight leading-tight">
-        Tailored Export Solutions for Global Procurement Teams
-      </h2>
-      
-      <p className="text-[#F4F0E6]/80 text-sm md:text-base leading-relaxed font-normal">
-        We streamline wholesale procurement for snack manufacturers, re-packers, and commercial importers. Pistachio Home offers end-to-end lot traceability, pre-shipment laboratory samples, and flexible private-label or bulk carton options.
-      </p>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-        <div className="p-3.5 bg-[#133A2E] border border-[#1A4337] rounded-xl flex items-center gap-3">
-          <Check className="w-4 h-4 text-[#C5922E] shrink-0" />
-          <span className="text-xs font-bold text-[#F4F0E6]">Vacuum Bags &amp; 10kg/25kg Cartons</span>
         </div>
-        <div className="p-3.5 bg-[#133A2E] border border-[#1A4337] rounded-xl flex items-center gap-3">
-          <Check className="w-4 h-4 text-[#C5922E] shrink-0" />
-          <span className="text-xs font-bold text-[#F4F0E6]">Flexible LC &amp; TT Payment Terms</span>
+      </section>
+
+      {/* 3. TAILORED EXPORT SOLUTIONS */}
+      <section className="py-16 md:py-18 bg-[#0B2B22] border-b border-[#1A4337]">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <div className="lg:col-span-6 space-y-6">
+            <h2 className="text-3xl sm:text-4xl font-black text-[#F4F0E6] tracking-tight leading-tight">
+              Tailored Export Solutions for Global Procurement Teams
+            </h2>
+            
+            <p className="text-[#F4F0E6]/80 text-sm md:text-base leading-relaxed font-normal">
+              We streamline wholesale procurement for food manufacturers, distributors, and commercial importers. We offer customized bulk packaging, private labeling, pre-shipment lab samples, and flexible international trade terms.
+            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+              <div className="p-3.5 bg-[#133A2E] border border-[#1A4337] rounded-xl flex items-center gap-3">
+                <Check className="w-4 h-4 text-[#C5922E] shrink-0" />
+                <span className="text-xs font-bold text-[#F4F0E6]">Export Cartons &amp; 16kg Tins</span>
+              </div>
+              <div className="p-3.5 bg-[#133A2E] border border-[#1A4337] rounded-xl flex items-center gap-3">
+                <Check className="w-4 h-4 text-[#C5922E] shrink-0" />
+                <span className="text-xs font-bold text-[#F4F0E6]">Flexible Payment Terms</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="lg:col-span-6 relative h-80 sm:h-[450px] w-full flex items-center justify-center">
+            <Image
+              src="/hero.png"
+              alt="B2B Wholesale Trade Partner"
+              fill
+              priority
+              className="object-contain object-center drop-shadow-none"
+            />
+          </div>
+
         </div>
-      </div>
-    </div>
-
-    {/* RIGHT: JUST CLEAR PNG IMAGE */}
-    <div className="lg:col-span-6 relative h-80 sm:h-[450px] w-full flex items-center justify-center">
-      <Image
-        src="/hero.png"
-        alt="B2B Pistachio Wholesale Partner"
-        fill
-        priority
-        className="object-contain object-center drop-shadow-none"
-      />
-    </div>
-
-  </div>
-</section>
+      </section>
 
       {/* 4. CORE CAPABILITIES */}
       <section className="py-16 md:py-20 bg-[#133A2E] border-b border-[#1A4337]">
         <div className="max-w-7xl mx-auto px-6 md:px-12 space-y-12">
           
           <div className="text-center max-w-2xl mx-auto space-y-3">
-          
             <h2 className="text-3xl md:text-4xl font-black text-[#F4F0E6] tracking-tight">
               Engineered for High-Volume International Supply
             </h2>
@@ -169,9 +162,9 @@ export default function AboutPage() {
               <div className="p-3 bg-[#133A2E] border border-[#1A4337] rounded-xl text-[#C5922E] w-fit">
                 <Award className="w-6 h-6" />
               </div>
-              <h3 className="text-base font-bold text-[#F4F0E6]">Direct Facility Sourcing</h3>
+              <h3 className="text-base font-bold text-[#F4F0E6]">Direct Origin Sourcing</h3>
               <p className="text-xs text-[#F4F0E6]/70 leading-relaxed">
-                Direct orchard contracts eliminate intermediate trade markups for maximum buyer profitability.
+                Direct relationships with growers and processors guarantee competitive B2B prices.
               </p>
             </div>
 
@@ -179,9 +172,9 @@ export default function AboutPage() {
               <div className="p-3 bg-[#133A2E] border border-[#1A4337] rounded-xl text-[#C5922E] w-fit">
                 <ThermometerSnowflake className="w-6 h-6" />
               </div>
-              <h3 className="text-base font-bold text-[#F4F0E6]">Climate-Controlled Storage</h3>
+              <h3 className="text-base font-bold text-[#F4F0E6]">Standardized Storage</h3>
               <p className="text-xs text-[#F4F0E6]/70 leading-relaxed">
-                Low-temperature warehousing prevents lipid oxidation, maintaining color, taste, and shell brightness.
+                Modern warehousing keeps products fresh, preserving aroma, color, and key nutritional properties.
               </p>
             </div>
 
@@ -189,9 +182,9 @@ export default function AboutPage() {
               <div className="p-3 bg-[#133A2E] border border-[#1A4337] rounded-xl text-[#C5922E] w-fit">
                 <Scale className="w-6 h-6" />
               </div>
-              <h3 className="text-base font-bold text-[#F4F0E6]">Precision Calibration</h3>
+              <h3 className="text-base font-bold text-[#F4F0E6]">Strict QC Testing</h3>
               <p className="text-xs text-[#F4F0E6]/70 leading-relaxed">
-                Optical defect elimination, mechanical size grading, and certified moisture index testing.
+                Optical color sorting, chemical property testing, and purity checks for every lot.
               </p>
             </div>
 
@@ -199,9 +192,9 @@ export default function AboutPage() {
               <div className="p-3 bg-[#133A2E] border border-[#1A4337] rounded-xl text-[#C5922E] w-fit">
                 <FileCheck2 className="w-6 h-6" />
               </div>
-              <h3 className="text-base font-bold text-[#F4F0E6]">Zero-Aflatoxin Standards</h3>
+              <h3 className="text-base font-bold text-[#F4F0E6]">Official Export COAs</h3>
               <p className="text-xs text-[#F4F0E6]/70 leading-relaxed">
-                Certified Phytosanitary documentation, Certificate of Origin, and accredited laboratory COA included.
+                Certified Phytosanitary documentation, Certificate of Origin, and accredited laboratory analysis.
               </p>
             </div>
 
@@ -215,9 +208,8 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-6 md:px-12 space-y-12">
           
           <div className="text-center max-w-2xl mx-auto space-y-3">
-        
             <h2 className="text-3xl md:text-4xl font-black text-[#F4F0E6] tracking-tight">
-              Orchard-To-Port Supply Chain Workflow
+              Origin-To-Port Export Supply Chain
             </h2>
           </div>
 
@@ -250,28 +242,26 @@ export default function AboutPage() {
           </div>
 
           <div className="lg:col-span-7 space-y-6">
-        
-            
             <h2 className="text-3xl sm:text-4xl font-black text-[#F4F0E6] tracking-tight">
-              Strict European &amp; International Food Safety Compliance
+              International Food Safety &amp; Standard Compliance
             </h2>
 
             <p className="text-[#F4F0E6]/80 text-sm md:text-base leading-relaxed">
-              Every shipment leaving Pistachio Home is subject to laser sorting, moisture standardization, and laboratory aflatoxin verification prior to container loading and sealing.
+              Every shipment coordinated by Zohreh Janatabadi undergoes strict quality checks, laboratory verification, and official certification prior to container dispatch.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
               <div className="flex items-center gap-3 bg-[#0B2B22] border border-[#1A4337] p-3.5 rounded-xl">
                 <Check className="w-4 h-4 text-[#C5922E] shrink-0" />
-                <span className="text-xs font-bold text-[#F4F0E6]">Calibrated Moisture (&lt;5%)</span>
+                <span className="text-xs font-bold text-[#F4F0E6]">Crocin &gt; 240 (Super Negin)</span>
               </div>
               <div className="flex items-center gap-3 bg-[#0B2B22] border border-[#1A4337] p-3.5 rounded-xl">
                 <Check className="w-4 h-4 text-[#C5922E] shrink-0" />
-                <span className="text-xs font-bold text-[#F4F0E6]">Grade A Ounce Uniformity</span>
+                <span className="text-xs font-bold text-[#F4F0E6]">Brix 27-29% (Feijoa Paste)</span>
               </div>
               <div className="flex items-center gap-3 bg-[#0B2B22] border border-[#1A4337] p-3.5 rounded-xl">
                 <Check className="w-4 h-4 text-[#C5922E] shrink-0" />
-                <span className="text-xs font-bold text-[#F4F0E6]">Zero Chemically Bleached Shells</span>
+                <span className="text-xs font-bold text-[#F4F0E6]">Grade A Zarvan Barberry</span>
               </div>
               <div className="flex items-center gap-3 bg-[#0B2B22] border border-[#1A4337] p-3.5 rounded-xl">
                 <Check className="w-4 h-4 text-[#C5922E] shrink-0" />
@@ -288,7 +278,6 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-6 md:px-12 space-y-12">
           
           <div className="text-center max-w-2xl mx-auto space-y-3">
-        
             <h2 className="text-3xl md:text-4xl font-black text-[#F4F0E6] tracking-tight">
               Container Dispatch &amp; Incoterms
             </h2>
@@ -299,7 +288,7 @@ export default function AboutPage() {
               <Ship className="w-8 h-8 text-[#C5922E]" />
               <h3 className="text-base font-bold text-[#F4F0E6]">Flexible Incoterms</h3>
               <p className="text-xs text-[#F4F0E6]/70 leading-relaxed">
-                FOB Bandar Abbas, CIF, and CFR quotation terms tailored for corporate purchasing teams.
+                FOB Bandar Abbas, CIF, and CFR quotation terms tailored for corporate procurement teams.
               </p>
             </div>
 
@@ -307,7 +296,7 @@ export default function AboutPage() {
               <PackageCheck className="w-8 h-8 text-[#C5922E]" />
               <h3 className="text-base font-bold text-[#F4F0E6]">Sealed Export Packaging</h3>
               <p className="text-xs text-[#F4F0E6]/70 leading-relaxed">
-                Vacuum-sealed inner bags, modified atmosphere liners, and reinforced export cartons.
+                Aroma-locked tins, export cartons, and reinforced container loading options.
               </p>
             </div>
 
@@ -315,7 +304,7 @@ export default function AboutPage() {
               <Globe2 className="w-8 h-8 text-[#C5922E]" />
               <h3 className="text-base font-bold text-[#F4F0E6]">Worldwide Freight Corridors</h3>
               <p className="text-xs text-[#F4F0E6]/70 leading-relaxed">
-                Direct container vessel dispatch to Europe, Eurasia, the Middle East, and East Asia.
+                Direct container dispatch to Europe, Eurasia, Middle East, and Asian trade hubs.
               </p>
             </div>
           </div>
@@ -328,19 +317,17 @@ export default function AboutPage() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#C5922E]/10 rounded-full blur-[160px] pointer-events-none" />
 
         <div className="max-w-4xl mx-auto px-6 text-center space-y-8 relative z-10">
-       
-
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-[#F4F0E6] tracking-tight leading-tight">
-            Ready to Source Lab-Certified Premium Pistachios?
+            Ready to Source Lab-Certified Premium Goods?
           </h2>
 
           <p className="text-[#F4F0E6]/80 text-sm sm:text-base font-normal max-w-xl mx-auto leading-relaxed">
-            Request verified sample packages or get a customized FOB/CIF wholesale quotation within 24 hours.
+            Request verified product samples or get a customized FOB/CIF quotation directly from Zohreh Janatabadi within 24 hours.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
             <a
-              href="https://wa.me/"
+              href={`https://wa.me/${whatsappNumber}?text=${whatsappMsg}`}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#C5922E] hover:bg-[#B38226] text-[#0B2B22] font-black text-xs uppercase tracking-wider px-8 py-4 rounded-xl shadow-xl shadow-[#C5922E]/20 transition-all duration-300"
@@ -350,7 +337,7 @@ export default function AboutPage() {
             </a>
 
             <a
-              href="mailto:export@pistachiohome.com"
+              href="mailto:trade@zohreh-janatabadi.com"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#0B2B22] hover:bg-[#133A2E] border border-[#1A4337] text-[#F4F0E6] font-bold text-xs uppercase tracking-wider px-8 py-4 rounded-xl transition"
             >
               <span>Email Request</span>

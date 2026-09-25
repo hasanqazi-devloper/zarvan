@@ -12,8 +12,8 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-title: "Iranian Pistachio Exporter & Wholesale Bulk Supplier | Pistachio Home",
-description: "Direct B2B exporter of premium Iranian pistachios (Akbari, Fandoghi, Ahmad Aghaei & Kaleh Ghouchi). Premium quality, lab-tested, container-load wholesale supply for global markets.",
+title: "Zarvan | Premium Iranian Saffron, Pistachios, Barberry & Food Exports",
+description: "Zarvan is a premier B2B exporter of high-grade Iranian Saffron, Pistachios, Barberries (Zereshk), Refined Oils, and Tomato Paste. Request wholesale quotes and custom export packaging today.",
   // 👑 Site Icons Configuration Engine
   icons: {
     // icon: "/favicon.ico", // public/favicon.ico wala path

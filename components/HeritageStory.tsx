@@ -1,39 +1,39 @@
 'use client';
 
 import React from 'react';
-import { Trees, Microscope, PackageCheck, Ship, ShieldCheck } from 'lucide-react';
+import { Trees, Microscope, PackageCheck, ShieldCheck, Ship } from 'lucide-react';
 
 export default function WorkflowSection() {
   const steps = [
     {
       num: '01',
       icon: Trees,
-      title: 'Orchard Harvest',
-      desc: 'Selective picking from Rafsanjan groves at peak ripeness.'
+      title: 'Selective Sourcing',
+      desc: 'Hand-picked Saffron, Zarvan Barberries, and Pistachios directly from Iranian farms.'
     },
     {
       num: '02',
       icon: Microscope,
-      title: 'Laser & Lab Sorting',
-      desc: 'Machine sizing and certified aflatoxin testing.'
+      title: 'Lab Testing & Sizing',
+      desc: 'Certified COA testing for Saffron Crocin levels, Brix (27-29%), and moisture control.'
     },
     {
       num: '03',
       icon: PackageCheck,
-      title: 'Vacuum Packaging',
-      desc: 'Sealed 5kg/10kg cartons with anti-moisture barrier.'
+      title: 'Export Grade Packing',
+      desc: '5kg/16kg Tin (Halab) drums for oils & moisture-proof cartons for dry goods.'
     },
     {
       num: '04',
       icon: ShieldCheck,
-      title: 'Customs Clear',
-      desc: 'Full phytosanitary & origin docs provided.'
+      title: 'Customs & COA Clearance',
+      desc: 'Phytosanitary certificate, Origin papers & Health Inspection approvals.'
     },
     {
       num: '05',
       icon: Ship,
-      title: 'Port Dispatch',
-      desc: 'Direct vessel loading from Bandar Abbas.'
+      title: 'Container Port Dispatch',
+      desc: 'Direct vessel shipment to global ports with end-to-end consignment tracking.'
     }
   ];
 
@@ -42,12 +42,11 @@ export default function WorkflowSection() {
       <div className="max-w-6xl mx-auto space-y-10">
 
         <div className="text-center space-y-2 max-w-2xl mx-auto">
-       
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-[#0B2B22]">
-            Our 5-Step Orchard-To-Port Workflow
+            Our 5-Step Farm-To-Export Workflow
           </h2>
           <p className="text-xs sm:text-sm text-[#0B2B22]/70 font-medium">
-            Standardized Quality Control for Global Wholesale Contracts
+            Standardized Quality &amp; Inspection Protocol for Global Food Distributors
           </p>
         </div>
 
@@ -57,7 +56,7 @@ export default function WorkflowSection() {
             return (
               <div
                 key={idx}
-                className="bg-[#FFFFFF] border border-[#E2D5B8] p-5 rounded-2xl shadow-sm hover:border-[#C5922E] transition-all relative flex flex-col justify-between"
+                className="bg-[#FFFFFF] border border-[#E2D5B8] p-5 rounded-2xl shadow-sm hover:border-[#C5922E] transition-all relative flex flex-col justify-between hover:-translate-y-1"
               >
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">

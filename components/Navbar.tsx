@@ -23,13 +23,13 @@ export default function Navbar() {
         <Link href="/" className="flex items-center gap-3.5 group shrink-0">
           <div className="relative flex items-center transition-transform duration-300 group-hover:scale-105">
             <Image
-              src="/logo.png"
-              alt="Pistachio Home Logo"
+              src="/navbar.png"
+              alt="Zarvan Export Logo"
               width={200}
               height={70}
               quality={100}
               unoptimized
-              className="h-10 md:h-12 w-auto object-contain drop-shadow-[0_0_12px_rgba(197,146,46,0.25)] brightness-110 contrast-105"
+              className="h-12 md:h-14 w-auto object-contain drop-shadow-[0_0_12px_rgba(197,146,46,0.25)] brightness-110 contrast-105"
               priority
             />
           </div>
@@ -37,13 +37,13 @@ export default function Navbar() {
           {/* <div className="hidden sm:flex flex-col justify-center border-l-2 border-[#C5922E]/40 pl-3.5 py-0.5">
             <div className="flex items-center gap-2">
               <span className="text-base md:text-lg font-black tracking-[0.2em] uppercase leading-none text-[#EFECE6] group-hover:text-[#C5922E] transition-colors">
-                PISTACHIO <span className="text-[#C5922E] drop-shadow-[0_0_8px_rgba(197,146,46,0.4)]">HOME</span>
+                ZARVAN <span className="text-[#C5922E] drop-shadow-[0_0_8px_rgba(197,146,46,0.4)]">EXPORTS</span>
               </span>
             </div>
             <div className="flex items-center gap-1.5 mt-1">
               <span className="w-1.5 h-1.5 rounded-full bg-[#C5922E] shadow-[0_0_6px_#C5922E] animate-pulse" />
               <span className="text-[9px] font-bold tracking-[0.18em] text-[#EFECE6]/70 uppercase">
-                Premium B2B Export
+                Iranian Saffron, Barberry & Nuts
               </span>
             </div>
           </div> */}

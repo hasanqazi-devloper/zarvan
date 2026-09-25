@@ -1,36 +1,33 @@
-"use client";
+'use client';
 
-import { motion as m } from "framer-motion";
+import React from 'react';
+import { motion } from 'framer-motion';
 
 export default function WhatsAppButton() {
-  const phoneNumber = "989000000000"; // Aapna WhatsApp number yahan likhein (e.g. 989123456789)
+  const phoneNumber = '989100424714'; // Updated to Zohreh Janatabadi's WhatsApp (+98 910 042 4714)
   const directMessage = encodeURIComponent(
-    "Hello Pistachio Home Team, I would like to inquire about bulk pistachio container quotations and quality spec sheets."
+    'Hello Zohreh, I am interested in inquiring about bulk container orders for Super Negin Saffron, Zarvan Barberry, Feijoa Tomato Paste, and Nazila Edible Oils.'
   );
 
   return (
-    <m.a
+    <motion.a
       href={`https://wa.me/${phoneNumber}?text=${directMessage}`}
       target="_blank"
       rel="noopener noreferrer"
       initial={{ opacity: 0, scale: 0.8 }}
       animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
+      transition={{ duration: 0.5, ease: 'easeOut' }}
       className="fixed bottom-6 right-6 z-50 flex items-center justify-center h-14 w-14 rounded-full bg-[#0B2B22] border border-[#C5922E]/50 hover:border-[#C5922E] shadow-2xl group transition-all duration-300 transform-gpu active:scale-95 select-none cursor-pointer"
-      aria-label="Contact Pistachio Home on WhatsApp"
+      aria-label="Contact Zohreh Janatabadi on WhatsApp"
     >
-      {/* Top Badge */}
       <div className="absolute -top-7 right-0 bg-[#C5922E] text-[#0B2B22] text-[8px] font-black tracking-[0.2em] uppercase px-2 py-0.5 rounded border border-[#C5922E]/40 font-sans shadow-md pointer-events-none select-none opacity-90 group-hover:opacity-100 transition-all duration-300">
-        B2B·DESK
+        TRADE·DESK
       </div>
 
-      {/* Button Circle Container */}
       <div className="relative h-11 w-11 flex items-center justify-center shrink-0 rounded-full overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-[#133A2E] to-[#0B2B22] rounded-full shadow-inner transition-transform duration-500 group-hover:scale-105" />
-        
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(197,146,46,0.3)_0%,transparent_70%)] rounded-full pointer-events-none" />
 
-        {/* WhatsApp Icon with Gold/Accent Tone */}
         <svg 
           viewBox="0 0 24 24" 
           className="w-5 h-5 text-[#C5922E] group-hover:text-amber-300 relative z-10 fill-current drop-shadow-[0_2px_5px_rgba(0,0,0,0.8)] transition-transform duration-500 group-hover:rotate-12 group-hover:scale-110"
@@ -39,10 +36,9 @@ export default function WhatsAppButton() {
         </svg>
       </div>
 
-      {/* Unread Notification Badge */}
       <span className="absolute top-1 right-1 flex h-3.5 w-3.5 items-center justify-center rounded-full bg-[#C5922E] text-[8px] font-black font-sans text-[#0B2B22] shadow-md border border-[#0B2B22]">
         1
       </span>
-    </m.a>
+    </motion.a>
   );
 }

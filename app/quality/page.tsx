@@ -15,52 +15,55 @@ import {
   Check,
   Award,
   Scale,
-  Sparkles,
   Microscope,
-  CheckCircle2,
-  FileSpreadsheet
+  CheckCircle2
 } from 'lucide-react';
 
 export default function QualityPage() {
+  const whatsappNumber = '989100424714';
+  const whatsappMsg = encodeURIComponent(
+    'Hello Zohreh, I would like to request COA reports and lab test specifications for your export commodities.'
+  );
+
   const qualityPillars = [
     {
       num: '01',
-      title: 'Zero-Aflatoxin Protocol',
-      desc: 'Rigorous multi-stage sampling verified by accredited third-party laboratories to meet strict European and Asian safety thresholds.'
+      title: 'Lab COA & Purity Assurance',
+      desc: 'Rigorous testing for Crocin levels (Saffron > 240), Brix concentration (Tomato Paste 27-29%), and chemical purity across all commodities.'
     },
     {
       num: '02',
       title: 'Optical & Laser Sorting',
-      desc: 'High-speed monochrome and color sorting channels automatically detect and discard shell deformities, cracks, and color variations.'
+      desc: 'High-speed color and size sorting channels automatically eliminate imperfections in Zarvan Barberry, Pistachios, and raw harvests.'
     },
     {
       num: '03',
-      title: 'Moisture Calibration',
-      desc: 'Controlled low-heat drying maintaining internal humidity strictly below 5% to prevent mold growth and extend shelf life.'
+      title: 'Controlled Moisture & Shelf Life',
+      desc: 'Precision drying and sealed packaging maintain optimal internal humidity to prevent spoilage and protect natural aroma during transit.'
     },
     {
       num: '04',
-      title: 'Batch Traceability',
-      desc: 'Every exported container is tagged with a unique batch number linked directly to its orchard source and lab inspection report.'
+      title: 'Full Batch Traceability',
+      desc: 'Every exported container is tagged with a unique batch number linked directly to its origin farm, processing facility, and lab inspection report.'
     }
   ];
 
   const labCertifications = [
-    { title: 'Phytosanitary Certificate', desc: 'Issued by national agricultural authorities confirming pest and pathogen-free status.' },
-    { title: 'Certificate of Analysis (COA)', desc: 'Detailed lab breakdown of moisture content, aflatoxin levels (B1, B2, G1, G2), and purity.' },
-    { title: 'Certificate of Origin', desc: 'Official documentation confirming authentic Iranian Rafsanjan origins.' },
-    { title: 'Fumigation & Inspection Certificate', desc: 'Container-level treatment verification for seamless customs clearance at destination ports.' }
+    { title: 'Phytosanitary Certificate', desc: 'Issued by national agricultural authorities confirming pest and pathogen-free status for customs clearance.' },
+    { title: 'Certificate of Analysis (COA)', desc: 'Detailed laboratory breakdown of chemical composition, Crocin/Safranal levels, Brix, purity, and moisture.' },
+    { title: 'Certificate of Origin', desc: 'Official government documentation confirming authentic origin for all supplied goods.' },
+    { title: 'Fumigation & Health Certificate', desc: 'Container-level health and treatment verification for seamless entry into destination ports.' }
   ];
 
   return (
     <div className="bg-[#0B2B22] text-[#F4F0E6] min-h-screen selection:bg-[#C5922E] selection:text-[#0B2B22]">
 
-      {/* 1. HERO SECTION (Quality & Lab Background) */}
+      {/* 1. HERO SECTION */}
       <section className="relative bg-[#0B2B22] text-[#F4F0E6] overflow-hidden py-20 md:py-18 border-b border-[#1A4337]">
         <div className="absolute inset-0 z-0">
           <Image
             src="https://images.unsplash.com/photo-1756749442845-4973b7cede48?auto=format&fit=crop&w=1920&q=100"
-            alt="Pistachio Quality Control Lab"
+            alt="Agricultural Commodity Quality Assurance"
             fill
             priority
             unoptimized
@@ -77,7 +80,7 @@ export default function QualityPage() {
             </h1>
 
             <p className="text-[#F4F0E6]/90 text-sm sm:text-base md:text-lg font-medium leading-relaxed max-w-2xl">
-              Uncompromising laboratory testing, automated optical sorting, and international compliance protocols ensuring every batch meets global food safety standards.
+              Strict laboratory testing, automated optical sorting, and international compliance protocols managed by Zohreh Janatabadi to ensure every export shipment meets global standards.
             </p>
 
             <div className="pt-2">
@@ -97,31 +100,29 @@ export default function QualityPage() {
       <section id="standards" className="py-16 md:py-18 bg-[#133A2E] border-b border-[#1A4337] relative">
         <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
-          {/* LEFT: CLEAR PNG SHOWCASE */}
           <div className="lg:col-span-6 relative h-80 sm:h-[450px] w-full flex items-center justify-center">
             <Image
               src="/about.png"
-              alt="Laboratory Certified Iranian Pistachios"
+              alt="Lab Certified Commodity Export"
               fill
               priority
               className="object-contain object-center drop-shadow-none"
             />
           </div>
 
-          {/* RIGHT: CONTENT */}
           <div className="lg:col-span-6 space-y-6">
             <h2 className="text-3xl sm:text-4xl font-black text-[#F4F0E6] tracking-tight leading-tight">
-              Precision Grading & Zero-Tolerance Safety Protocol
+              Precision Processing & Direct Origin Quality Control
             </h2>
             
             <p className="text-[#F4F0E6]/80 text-sm md:text-base leading-relaxed font-normal">
-              At Pistachio Home, quality control starts before harvest. We implement strict moisture monitoring in orchards and process every lot through advanced mechanical sizing, optical color sorting, and laboratory aflatoxin screenings.
+              Quality control begins directly at origin. We enforce strict moisture checks, laboratory color/density analysis, and purity screenings across our entire commodity lineup—including Super Negin Saffron, Zarvan Barberry, Nazila Oils, Feijoa Tomato Paste, and Pistachios.
             </p>
 
             <div className="p-4 bg-[#0B2B22] border-l-4 border-[#C5922E] rounded-r-xl space-y-1 border border-[#1A4337]">
-              <p className="text-xs font-bold text-[#C5922E] uppercase tracking-wider">Aflatoxin Control Guarantee</p>
+              <p className="text-xs font-bold text-[#C5922E] uppercase tracking-wider">Export Compliance Assurance</p>
               <p className="text-xs text-[#F4F0E6]/80">
-                Every batch undergoes HPLC (High-Performance Liquid Chromatography) testing to guarantee compliance with EU B1 & Total Aflatoxin limit regulations.
+                Every batch is verified through accredited laboratory testing to confirm exact technical parameters before container sealing and export dispatch.
               </p>
             </div>
           </div>
@@ -135,7 +136,7 @@ export default function QualityPage() {
           
           <div className="text-center max-w-2xl mx-auto space-y-3">
             <h2 className="text-3xl md:text-4xl font-black text-[#F4F0E6] tracking-tight">
-              Four Stages of Quality Control
+              Four Stages of Quality Verification
             </h2>
           </div>
 
@@ -156,41 +157,39 @@ export default function QualityPage() {
       <section className="py-16 md:py-18 bg-[#133A2E] border-b border-[#1A4337]">
         <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
-          {/* LEFT: CONTENT & SPECIFICATIONS */}
           <div className="lg:col-span-6 space-y-6">
             <h2 className="text-3xl sm:text-4xl font-black text-[#F4F0E6] tracking-tight leading-tight">
-              Export Grade Technical Specifications
+              Product-Specific Analytical Benchmarks
             </h2>
             
             <p className="text-[#F4F0E6]/80 text-sm md:text-base leading-relaxed font-normal">
-              We provide precise analytical parameters to ensure consistency for wholesale distributors, roasters, and food manufacturing applications.
+              We provide precise analytical laboratory metrics for international corporate buyers, food processors, and wholesale packing facilities.
             </p>
 
             <div className="space-y-3 pt-2">
               <div className="p-4 bg-[#0B2B22] border border-[#1A4337] rounded-xl flex items-center justify-between">
-                <span className="text-xs font-bold text-[#F4F0E6]">Moisture Level</span>
-                <span className="text-xs font-bold text-[#C5922E]">Max 5.0%</span>
+                <span className="text-xs font-bold text-[#F4F0E6]">Super Negin Saffron</span>
+                <span className="text-xs font-bold text-[#C5922E]">Crocin &gt; 240 / Safranal &gt; 35</span>
               </div>
               <div className="p-4 bg-[#0B2B22] border border-[#1A4337] rounded-xl flex items-center justify-between">
-                <span className="text-xs font-bold text-[#F4F0E6]">Natural Open Split Shells</span>
-                <span className="text-xs font-bold text-[#C5922E]">Min 95%</span>
+                <span className="text-xs font-bold text-[#F4F0E6]">Feijoa Tomato Paste</span>
+                <span className="text-xs font-bold text-[#C5922E]">Brix 27-29% / Color A/B &gt; 2.1</span>
               </div>
               <div className="p-4 bg-[#0B2B22] border border-[#1A4337] rounded-xl flex items-center justify-between">
-                <span className="text-xs font-bold text-[#F4F0E6]">Foreign Material / Debris</span>
-                <span className="text-xs font-bold text-[#C5922E]">Max 0.1%</span>
+                <span className="text-xs font-bold text-[#F4F0E6]">Zarvan Barberry (Pofaki)</span>
+                <span className="text-xs font-bold text-[#C5922E]">Moisture &lt; 15% / Seedless Grade A</span>
               </div>
               <div className="p-4 bg-[#0B2B22] border border-[#1A4337] rounded-xl flex items-center justify-between">
-                <span className="text-xs font-bold text-[#F4F0E6]">Deformed / Stained Shells</span>
-                <span className="text-xs font-bold text-[#C5922E]">Max 1.0%</span>
+                <span className="text-xs font-bold text-[#F4F0E6]">Nazila Refined Soybean Oil</span>
+                <span className="text-xs font-bold text-[#C5922E]">Free Fatty Acids &lt; 0.1%</span>
               </div>
             </div>
           </div>
 
-          {/* RIGHT: CLEAR PNG SHOWCASE */}
           <div className="lg:col-span-6 relative h-80 sm:h-[450px] w-full flex items-center justify-center">
             <Image
               src="/hero.png"
-              alt="Quality Inspected Bulk Pistachios"
+              alt="Quality Certified Export Commodities"
               fill
               priority
               className="object-contain object-center drop-shadow-none"
@@ -206,7 +205,7 @@ export default function QualityPage() {
           
           <div className="text-center max-w-2xl mx-auto space-y-3">
             <h2 className="text-3xl md:text-4xl font-black text-[#F4F0E6] tracking-tight">
-              Official Shipping &amp; Quality Documentation
+              Official Export &amp; Customs Documentation
             </h2>
           </div>
 
@@ -233,29 +232,29 @@ export default function QualityPage() {
 
         <div className="max-w-4xl mx-auto px-6 text-center space-y-8 relative z-10">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-[#F4F0E6] tracking-tight leading-tight">
-            Need Pre-Shipment Lab Samples or COA Reports?
+            Need Batch COA Documents or Laboratory Samples?
           </h2>
 
           <p className="text-[#F4F0E6]/80 text-sm sm:text-base font-normal max-w-xl mx-auto leading-relaxed">
-            Request official batch COA documents or receive physical laboratory samples sent directly to your corporate office before placing bulk orders.
+            Request official batch certificate of analysis reports or order pre-shipment product samples directly from Zohreh Janatabadi.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
             <a
-              href="https://wa.me/"
+              href={`https://wa.me/${whatsappNumber}?text=${whatsappMsg}`}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#C5922E] hover:bg-[#B38226] text-[#0B2B22] font-black text-xs uppercase tracking-wider px-8 py-4 rounded-xl shadow-xl shadow-[#C5922E]/20 transition-all duration-300"
             >
               <MessageSquare className="w-4 h-4 fill-[#0B2B22]" />
-              <span>Request Sample Pack</span>
+              <span>Request Sample / COA</span>
             </a>
 
             <a
-              href="mailto:quality@pistachiohome.com"
+              href="mailto:trade@zohreh-janatabadi.com"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#0B2B22] hover:bg-[#133A2E] border border-[#1A4337] text-[#F4F0E6] font-bold text-xs uppercase tracking-wider px-8 py-4 rounded-xl transition"
             >
-              <span>Email Quality Team</span>
+              <span>Email Quality Desk</span>
               <ArrowUpRight className="w-4 h-4 text-[#C5922E]" />
             </a>
           </div>

@@ -5,7 +5,7 @@ import { Clock, ShieldCheck, FileText, Send, CheckCircle } from 'lucide-react';
 
 export default function RFQSection() {
   const [incoterm, setIncoterm] = useState('FOB');
-  const [productType, setProductType] = useState('Fandoghi Pistachio (Round)');
+  const [productType, setProductType] = useState('Iranian Super Negin Saffron');
   const [containerQty, setContainerQty] = useState('1 x 20ft Container');
 
   return (
@@ -16,29 +16,25 @@ export default function RFQSection() {
       
       <div className="relative max-w-7xl mx-auto space-y-10">
 
-        {/* HEADER SECTION */}
         <div className="text-center max-w-3xl mx-auto space-y-2">
-      
           <h2 className="text-3xl md:text-5xl font-black tracking-tight text-[#F4F0E6] leading-tight">
-            Request Container Pricing (FOB / CIF)
+            Request B2B Export Quotation (FOB / CIF)
           </h2>
           <p className="text-[#F4F0E6]/70 text-xs md:text-sm font-medium max-w-xl mx-auto leading-relaxed">
-            Get an official commercial quotation from Pistachio Home. Includes verified Proforma Invoice and Lab Analysis Report.
+            Direct trade inquiry line for Zohreh Janatabadi. Receive official commercial Proforma Invoice and batch-specific Lab COA.
           </p>
         </div>
 
-        {/* MAIN CONTAINER */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
 
-          {/* LEFT COLUMN */}
           <div className="lg:col-span-5 space-y-6 bg-[#133A2E] border border-[#1A4337] p-6 md:p-8 rounded-3xl shadow-xl flex flex-col justify-between">
             <div className="space-y-6">
               <div>
                 <span className="text-[10px] font-black text-[#C5922E] uppercase tracking-widest block mb-1">
-                  Quality Guaranteed
+                  Verified Iranian Export Quality
                 </span>
                 <h3 className="text-xl md:text-2xl font-black text-[#F4F0E6]">
-                  Pistachio Home Direct Guarantee
+                  Trade Partnership Commitment
                 </h3>
               </div>
 
@@ -49,8 +45,8 @@ export default function RFQSection() {
                     <Clock className="w-4 h-4" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-[#F4F0E6] text-xs">Fast-Track Quote</h4>
-                    <p className="text-[11px] text-[#F4F0E6]/60 mt-0.5 leading-normal">Official Proforma Invoice issued within hours.</p>
+                    <h4 className="font-bold text-[#F4F0E6] text-xs">Direct Commercial Response</h4>
+                    <p className="text-[11px] text-[#F4F0E6]/60 mt-0.5 leading-normal">Fast turnaround for wholesale price lists and specs.</p>
                   </div>
                 </div>
 
@@ -59,8 +55,8 @@ export default function RFQSection() {
                     <ShieldCheck className="w-4 h-4" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-[#F4F0E6] text-xs">Certified Documentation</h4>
-                    <p className="text-[11px] text-[#F4F0E6]/60 mt-0.5 leading-normal">Phytosanitary, Certificate of Origin &amp; Aflatoxin COA.</p>
+                    <h4 className="font-bold text-[#F4F0E6] text-xs">Complete Certification Docs</h4>
+                    <p className="text-[11px] text-[#F4F0E6]/60 mt-0.5 leading-normal">Includes Phytosanitary, Lab COA, and Certificate of Origin.</p>
                   </div>
                 </div>
 
@@ -69,8 +65,8 @@ export default function RFQSection() {
                     <FileText className="w-4 h-4" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-[#F4F0E6] text-xs">Flexible Export Terms</h4>
-                    <p className="text-[11px] text-[#F4F0E6]/60 mt-0.5 leading-normal">Transparent T/T and LC payment terms available.</p>
+                    <h4 className="font-bold text-[#F4F0E6] text-xs">High Tonnage Availability</h4>
+                    <p className="text-[11px] text-[#F4F0E6]/60 mt-0.5 leading-normal">Nazila Edible Oils, Feijoa Paste, and Spices ready for bulk shipment.</p>
                   </div>
                 </div>
 
@@ -80,12 +76,11 @@ export default function RFQSection() {
             <div className="bg-[#0B2B22] border border-[#1A4337] p-4 rounded-2xl flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-[#C5922E]" />
-                <span className="text-xs font-bold text-[#F4F0E6]">Direct Rafsanjan Orchard Supplier</span>
+                <span className="text-xs font-bold text-[#F4F0E6]">Export &amp; International Trade Representative</span>
               </div>
             </div>
           </div>
 
-          {/* RIGHT COLUMN */}
           <div className="lg:col-span-7 bg-[#133A2E] border border-[#1A4337] p-6 md:p-8 rounded-3xl shadow-xl space-y-6">
 
             <form onSubmit={(e) => e.preventDefault()} className="space-y-4">
@@ -95,7 +90,7 @@ export default function RFQSection() {
                   1. Shipping Term (Incoterms 2020)
                 </label>
                 <div className="grid grid-cols-2 gap-3">
-                  {['FOB (Bandar Abbas / Port)', 'CIF (Destination Port)'].map((term) => {
+                  {['FOB (Iranian Port / Bandar Abbas)', 'CIF (Destination Port)'].map((term) => {
                     const termKey = term.split(' ')[0];
                     const isSelected = incoterm === termKey;
                     return (
@@ -103,7 +98,7 @@ export default function RFQSection() {
                         type="button"
                         key={term}
                         onClick={() => setIncoterm(termKey)}
-                        className={`p-3.5 text-xs font-bold rounded-xl border transition-all text-left flex items-center justify-between ${
+                        className={`p-3.5 text-xs font-bold rounded-xl border transition-all text-left flex items-center justify-between cursor-pointer ${
                           isSelected
                             ? 'bg-[#C5922E] text-[#0B2B22] border-[#E2B755] font-black shadow-lg'
                             : 'bg-[#0B2B22] border-[#1A4337] text-[#F4F0E6]/80 hover:border-[#C5922E]/40'
@@ -121,17 +116,18 @@ export default function RFQSection() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="space-y-1.5">
-                  <label className="text-xs font-bold text-[#F4F0E6]/80">Select Pistachio Variety</label>
+                  <label className="text-xs font-bold text-[#F4F0E6]/80">Select Commodity</label>
                   <select
                     value={productType}
                     onChange={(e) => setProductType(e.target.value)}
                     className="w-full bg-[#0B2B22] border border-[#1A4337] rounded-xl px-3.5 py-3 text-xs text-[#F4F0E6] font-medium focus:outline-none focus:border-[#C5922E]"
                   >
-                    <option>Fandoghi Pistachio (28/30, 30/32 Round)</option>
-                    <option>Ahmad Aghaei Pistachio (26/28 Long)</option>
-                    <option>Akbari Pistachio (20/22 Super Long)</option>
-                    <option>Kalleh Ghouchi Pistachio (24/26 Jumbo)</option>
-                    <option>Green Peeled Pistachio Kernels (Grade A)</option>
+                    <option>Iranian Super Negin Saffron</option>
+                    <option>Zarvan Dried Barberry (Zereshk)</option>
+                    <option>Feijoa Tomato Paste (27-29 Brix)</option>
+                    <option>Nazila Soybean Oil (5kg / 16kg Tin)</option>
+                    <option>Baran Golahi Edible Cooking Oil</option>
+                    <option>Iranian Pistachios (Akbari / Fandoghi)</option>
                   </select>
                 </div>
 
@@ -142,9 +138,10 @@ export default function RFQSection() {
                     onChange={(e) => setContainerQty(e.target.value)}
                     className="w-full bg-[#0B2B22] border border-[#1A4337] rounded-xl px-3.5 py-3 text-xs text-[#F4F0E6] font-medium focus:outline-none focus:border-[#C5922E]"
                   >
-                    <option>1 x 20ft Container (Trial Batch ~12-14 Tons)</option>
-                    <option>1 x 40ft Container (Standard FCL ~25 Tons)</option>
-                    <option>2 - 5 x 40ft Containers (Monthly Contract)</option>
+                    <option>Sample / Wholesale Batch</option>
+                    <option>1 x 20ft Container (Standard Trial Order)</option>
+                    <option>1 x 40ft Container (Full Load)</option>
+                    <option>High Tonnage Monthly Contract</option>
                   </select>
                 </div>
               </div>
@@ -154,16 +151,16 @@ export default function RFQSection() {
                   <label className="text-xs font-bold text-[#F4F0E6]/80">Company Name</label>
                   <input
                     type="text"
-                    placeholder="e.g. Royal Food Trading LLC"
+                    placeholder="e.g. Global Food Trading Co."
                     className="w-full bg-[#0B2B22] border border-[#1A4337] rounded-xl px-3.5 py-3 text-xs text-[#F4F0E6] focus:outline-none focus:border-[#C5922E] placeholder:text-[#F4F0E6]/30"
                   />
                 </div>
 
                 <div className="space-y-1.5">
-                  <label className="text-xs font-bold text-[#F4F0E6]/80">Destination Port</label>
+                  <label className="text-xs font-bold text-[#F4F0E6]/80">Destination Port / Country</label>
                   <input
                     type="text"
-                    placeholder="e.g. Jebel Ali / Mersin / Nhava Sheva"
+                    placeholder="e.g. Jebel Ali / Istanbul / Hamburg"
                     className="w-full bg-[#0B2B22] border border-[#1A4337] rounded-xl px-3.5 py-3 text-xs text-[#F4F0E6] focus:outline-none focus:border-[#C5922E] placeholder:text-[#F4F0E6]/30"
                   />
                 </div>
@@ -174,7 +171,7 @@ export default function RFQSection() {
                   <label className="text-xs font-bold text-[#F4F0E6]/80">Work Email</label>
                   <input
                     type="email"
-                    placeholder="import@company.com"
+                    placeholder="trade@company.com"
                     className="w-full bg-[#0B2B22] border border-[#1A4337] rounded-xl px-3.5 py-3 text-xs text-[#F4F0E6] focus:outline-none focus:border-[#C5922E] placeholder:text-[#F4F0E6]/30"
                   />
                 </div>
@@ -183,7 +180,7 @@ export default function RFQSection() {
                   <label className="text-xs font-bold text-[#F4F0E6]/80">WhatsApp / Phone Number</label>
                   <input
                     type="tel"
-                    placeholder="+971 50 000 0000"
+                    placeholder="+98 900 000 0000"
                     className="w-full bg-[#0B2B22] border border-[#1A4337] rounded-xl px-3.5 py-3 text-xs text-[#F4F0E6] focus:outline-none focus:border-[#C5922E] placeholder:text-[#F4F0E6]/30"
                   />
                 </div>
@@ -194,7 +191,7 @@ export default function RFQSection() {
                 className="w-full bg-[#C5922E] hover:bg-[#B38226] text-[#0B2B22] font-black text-xs md:text-sm py-4 rounded-xl shadow-lg transition-all uppercase tracking-wider flex items-center justify-center gap-2 mt-2 cursor-pointer active:scale-[0.98]"
               >
                 <Send className="w-4 h-4 stroke-[2.5]" />
-                <span>Submit RFQ &amp; Request Proforma Invoice</span>
+                <span>Submit Trade Inquiry to Zohreh Janatabadi</span>
               </button>
 
             </form>
